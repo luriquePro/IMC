@@ -1,0 +1,190 @@
+:root{
+    --text-color: #d1d5df;
+    --body-color: #171719;
+    --form-color: #252525;
+    --input-color: #3f3e45;
+    --button-color: #16a249;
+    --success-color: #079348;
+    --danger-color: #c2222f;
+    --info-color: #2a22c2;
+    --warning-color: #c2c222;
+
+    --font-default: 16px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;800;900&display=swap');
+
+*{
+    font-size: var(--font-default);
+    font-weight: normal;
+    box-sizing: border-box;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    transition: all .5s linear;
+
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+}
+
+.text-danger{color:var(--danger-color)}
+.text-success{color:var(--success-color)}
+.text-info{color:var(--info-color)}
+.text-warning{color:var(--warning-color)}
+
+body{
+    height: 100vh!important;
+    width: 100vw!important;
+    transition: all 0s;
+}
+
+section.calculadora{
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-color);
+    transition: all 0s;
+}
+section.calculadora main{
+    display: flex;
+    justify-content: end;
+}
+section.calculadora main .content-calculadora{
+    background-color: var(--form-color);
+    width: 640px;
+    margin: 3rem 22rem 3rem 0;
+    padding: 0 3rem;
+    transition: all 0s;
+}
+
+/* Content top */
+section.calculadora main .content-calculadora .content-top h1{
+    width: 100%;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 3.4rem;
+    text-align: start;
+    font-weight: bold;
+    color: white;
+    position: relative;
+}
+section.calculadora main .content-calculadora .content-top h1::after{
+    content: "";
+    position: absolute;
+    width: 11.25rem;
+    height: 0.2rem;
+    left: 5.8rem;
+    bottom: -6px;
+    border-radius: 0.25rem;
+    background: var(--success-color);
+    transform: translate(-50%, -50%);
+}
+
+/* Content Body (Middle) */
+section.calculadora main .content-calculadora .ccntent-body .content-form{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+section.calculadora main .content-calculadora .ccntent-body .content-form .content-input-label{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    position: relative;
+}
+
+section.calculadora main .content-calculadora .ccntent-body .content-form .content-input-label label{
+    font-size: 1.4rem;
+    margin-bottom: .7rem;
+}
+section.calculadora main .content-calculadora .ccntent-body .content-form .content-input-label input{
+    background-color: var(--input-color);
+    width: 100%;
+    font-size: 2.2rem;
+    font-weight: normal;
+    height: 4.2rem;
+    padding: 0 2rem;
+    color: white;
+    border-radius: .4rem;
+}
+section.calculadora main .content-calculadora .ccntent-body .content-form .content-input-label label.uni-medida{
+    font-size: 1.8rem;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+}
+section.calculadora main .content-calculadora .ccntent-body .content-form button.btn-submit{
+    margin: 2.4rem 0;
+    background-color: var(--button-color);
+    font-size: 2.3rem;
+    height: 4rem;
+    font-weight: bold;
+    letter-spacing: .15rem;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: .4rem;
+}
+section.calculadora main .content-calculadora .ccntent-body .content-form button.btn-submit::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+section.calculadora main .content-calculadora .ccntent-body .content-form button.btn-submit:hover::before{
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Content Footer (Bottom)*/
+
+section.calculadora main .content-calculadora .content-footer .content-message{
+    display: flex;
+    border-top: 2px solid #87878780;
+    border-bottom: 2px solid #87878780;
+    padding: 1.2rem .7rem;
+}
+section.calculadora main .content-calculadora .content-footer .content-message .imc{margin-right: 3rem}
+section.calculadora main .content-calculadora .content-footer .content-message .imc p:first-child{font-size: 2.8rem}
+section.calculadora main .content-calculadora .content-footer .content-message .imc p:last-child{
+    margin-top: .6rem;
+    text-align: center;
+    font-size: 1.25rem;
+}
+section.calculadora main .content-calculadora .content-footer .content-message .mensagem{
+    font-size: 1.6rem;
+    text-align: start;
+    line-height: 2.2rem;
+    letter-spacing: .12rem;
+}
+section.calculadora main .content-calculadora .content-footer .more-info{
+    padding: 2rem 0;
+    text-align: center;
+}
+section.calculadora main .content-calculadora .content-footer .more-info a{
+    color: var(--success-color);
+    font-size: 1.4rem;
+    transition: all .5s linear;
+}
+section.calculadora main .content-calculadora .content-footer .more-info a:hover{
+    text-decoration: underline;
+}
