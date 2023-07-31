@@ -12,40 +12,42 @@
     <section class="calculadora">
         <main>
             <div class="content-calculadora">
-                <div class="content-top">
-                    <h1>Calculadora - IMC</h1>
-                </div>
-                <div class="ccntent-body">
-                    <div class="content-form">
-                        <div class="content-input-label">
-                            <label for="peso">Peso em kg</label>
-                            <div class="content-input">
-                                <input type="number" id="peso" step="0.01" placeholder="85">
-                                <label for="peso" class="uni-medida">kg</label>
-                            </div>
-                        </div>
-                        <div class="content-input-label">
-                            <label for="altura">Altura em metros</label>
-                            <div class="content-input">
-                                <input type="number" id="altura" step="0.01" placeholder="1.75">
-                                <label for="altura" class="uni-medida">m</label>
-                            </div>
-                        </div>
-                        <button class="btn-submit" id="calcular">Calcular</button>
+                <div class="box">
+                    <div class="content-top">
+                        <h1>Calculadora - IMC</h1>
                     </div>
-                </div>
-                <div class="content-footer">
-                    <div class="content-message">
-                        <div class="imc">
-                            <p class="text-info" id="imc">00,00</p>
-                            <p>Seu IMC</p>
-                        </div>
-                        <div class="mensagem" id="mensagem">
-                            <!-- Cuidado! você está com sobrepeso! -->
-                            Insira os valores nos campos acima!
+                    <div class="ccntent-body">
+                        <div class="content-form">
+                            <div class="content-input-label">
+                                <label for="peso">Peso em kg</label>
+                                <div class="content-input">
+                                    <input type="number" id="peso" step="0.01" placeholder="85">
+                                    <label for="peso" class="uni-medida">kg</label>
+                                </div>
+                            </div>
+                            <div class="content-input-label">
+                                <label for="altura">Altura em metros</label>
+                                <div class="content-input">
+                                    <input type="number" id="altura" step="0.01" placeholder="1.75">
+                                    <label for="altura" class="uni-medida">m</label>
+                                </div>
+                            </div>
+                            <button class="btn-submit" id="calcular">Calcular</button>
                         </div>
                     </div>
-                    <div class="more-info"><a href="#">Mais informações sobre o IMC</a></div>
+                    <div class="content-footer">
+                        <div class="content-message">
+                            <div class="imc">
+                                <p class="text-info" id="imc">00,00</p>
+                                <p>Seu IMC</p>
+                            </div>
+                            <div class="mensagem" id="mensagem">
+                                <!-- Cuidado! você está com sobrepeso! -->
+                                Insira os valores nos campos acima!
+                            </div>
+                        </div>
+                        <div class="more-info"><a href="#">Mais informações sobre o IMC</a></div>
+                    </div>
                 </div>
             </div>
         </main>
